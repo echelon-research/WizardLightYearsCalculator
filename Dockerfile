@@ -24,7 +24,6 @@ RUN pip install --no-cache-dir --upgrade pip && \
 
 # Copy application code
 COPY *.py ./
-COPY tests/ ./tests/
 
 # Create directory for database
 RUN mkdir -p /app/data

@@ -1,0 +1,37 @@
+[project]
+name = "wizardlightyearscalculator"
+version = "1.0.0"
+description = "A Python REST API that calculates the distance in light-years between two EVE Online solar systems"
+authors = [
+    {name = "Dusty Meg", email = ""}
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+keywords = ["eve-online", "api", "flask", "distance-calculator"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Framework :: Flask",
+]
+
+dependencies = [
+    "Flask==3.0.0",
+    "Flask-Limiter==3.5.0",
+    "requests==2.31.0",
+    "python-dotenv==1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Dusty-Meg/WizardLightYearsCalculator"
+Repository = "https://github.com/Dusty-Meg/WizardLightYearsCalculator"
+Issues = "https://github.com/Dusty-Meg/WizardLightYearsCalculator/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

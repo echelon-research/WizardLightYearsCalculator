@@ -15,6 +15,11 @@ A Python REST API that calculates the distance in light-years between two EVE On
   - Sanitized error messages (no internal details exposed)
   - Request logging and monitoring
 
+## Requirements
+
+- Python 3.10 or higher
+- pip
+
 ## Installation
 
 1. **Clone the repository:**
@@ -228,6 +233,7 @@ WizardLightYearsCalculator/
 ├── Dockerfile              # Docker image configuration
 ├── docker-compose.yml      # Docker Compose setup
 ├── .dockerignore          # Docker build exclusions
+├── pyproject.toml         # Python project metadata
 ├── LICENSE                # MIT License
 ├── PROJECT_PLAN.md        # Detailed project plan
 ├── SECURITY.md            # Security documentation

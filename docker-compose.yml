@@ -1,0 +1,29 @@
+# Docker Compose configuration for WizardLightYearsCalculator
+
+services:
+  api:
+    build: .
+    container_name: wizard-lightyears-calculator
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_PATH=/app/data/wizard_calculator.db
+      - API_HOST=0.0.0.0
+      - API_PORT=5000
+      - DEBUG=False
+      - RATE_LIMIT_ENABLED=True
+      - RATE_LIMIT_PER_MINUTE=60
+      - RATE_LIMIT_PER_HOUR=1000
+    volumes:
+      - db-data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:5000/', timeout=2)"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+volumes:
+  db-data:
+    name: wizard-calculator-data

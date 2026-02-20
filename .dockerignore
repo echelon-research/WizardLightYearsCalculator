@@ -1,0 +1,40 @@
+# Ignore Python cache
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+.venv
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Database files (will be in volume)
+*.db
+*.sqlite
+
+# Git
+.git
+.gitignore
+
+# Documentation
+*.md
+!README.md
+
+# Tests (optional - comment out if you want tests in image)
+tests/
+*.pytest_cache
+
+# GitHub
+.github/
+
+# Environment files
+.env
+.env.*
+!.env.example
